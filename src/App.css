@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .top {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 25;
+}
+
+.header .top .col {
+  display: flex;
+}
+
+.header .top .col .topDiv {
+  margin-right: 15px;
+}
+
+.header .top .col span {
+  margin-left: 5px;
+}
+
+.header .top .col i {
+  margin-left: 15px;
+}
+
+.header .middle {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 25px;
+  background-color: #001e28;
 }
 
-.App-link {
-  color: #61dafb;
+.header .middle .col a img {
+  width: 300px;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header .middle .col .nav ul {
+  display: flex;
+}
+
+.header .middle .col .nav ul li {
+  margin: 0 10px;
+}
+
+.header .middle .col .nav ul li a {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.header .middle .col .nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.comp-logo {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #ffffff;
+}
+
+.header .middle .col .buttons a {
+  color: #ffffff;
+  margin-left: 15px;
+}
+
+.header .middle .col .buttons a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 481px) {
+  .header .top {
+    flex-direction: column;
+    font-size: 10px;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header .top .col:first-child {
+    margin-bottom: 5px;
+  }
+
+  .header .middle {
+    flex-direction: column;
+    height: 140px;
+    padding: 10px 25px;
+  }
+
+  .header .middle .col a img {
+    width: 250px;
+    height: auto;
+  }
+
+  .header .middle .col .nav ul li a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 482px) and (max-width: 1200px) {
+  .header .middle {
+    flex-direction: column;
+    height: 140px;
+    padding: 10px 25px;
   }
 }
