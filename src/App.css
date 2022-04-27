@@ -1,3 +1,5 @@
+/* Header Start */
+
 .header .top {
   display: flex;
   justify-content: space-between;
@@ -99,5 +101,68 @@
     flex-direction: column;
     height: 140px;
     padding: 10px 25px;
+  }
+}
+
+/* Hero Start  */
+
+.home .hero .container img {
+  min-width: 100%;
+  background-size: cover;
+  min-height: 100%;
+  background-repeat: no-repeat;
+}
+
+.home .hero {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.home .hero img {
+  width: 100px;
+}
+
+.home .hero .col {
+  position: relative;
+}
+
+.home .hero .col .content {
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  right: 0%;
+  text-align: center;
+}
+
+.home .hero .col .content .title {
+  color: #ffffff;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.home .hero .col .content .subtitle {
+  color: #ffffff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 481px) {
+  .home .hero .col .content .title {
+    font-size: 25px;
+  }
+
+  .home .hero .col .content .subtitle {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 482px) and (max-width: 1200px) {
+    .home .hero .col .content .title {
+      font-size: 40px;
+    }
+
+    .home .hero .col .content .subtitle {
+      font-size: 18px;
+    }
   }
 }
