@@ -155,14 +155,158 @@
   .home .hero .col .content .subtitle {
     font-size: 14px;
   }
+}
 
-  @media screen and (min-width: 482px) and (max-width: 1200px) {
-    .home .hero .col .content .title {
-      font-size: 40px;
-    }
+@media screen and (min-width: 482px) and (max-width: 1200px) {
+  .home .hero .col .content .title {
+    font-size: 40px;
+  }
 
-    .home .hero .col .content .subtitle {
-      font-size: 18px;
-    }
+  .home .hero .col .content .subtitle {
+    font-size: 18px;
+  }
+}
+
+.products {
+  margin: 80px 10px 40px 10px;
+}
+
+.products .rowTitle .col {
+  text-align: center;
+}
+
+.products .rowTitle .col hr {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.products .productsRow {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.products .productsRow .loading {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.products .buttons {
+  margin: 40px 0;
+}
+
+.products .buttons .btn {
+  background-color: transparent;
+  border: 1px solid #001e28;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  padding: 5px 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: all 1s;
+  margin-bottom: 5px;
+}
+
+.products .buttons .btn:hover {
+  background-color: #001e28;
+  color: #ffffff;
+}
+
+.products .buttons .btn:active {
+  transform: translateY(2px);
+}
+
+.products .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.products .cards .card {
+  width: 250px;
+  height: auto;
+  box-shadow: 0 0 5px #001e28;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.products .cards .card:hover {
+  box-shadow: 0 0 7px #000000;
+}
+
+.products .cards .card .card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 250px;
+}
+
+.products .cards .card .card-header img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  transition: all 1s;
+}
+
+.products .cards .card:hover .card-header img {
+  transform: scale(1.1);
+}
+
+.products .cards .card .card-body .title {
+  text-transform: uppercase;
+}
+
+.products .cards .card .card-body .other {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.products .cards .card .card-body .other span:last-child {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+
+.products .cards .card .card-footer {
+  margin: 20px 0 10px 0;
+}
+
+.products .cards .card .card-footer a {
+  background-color: #ffffff;
+  border: 1px solid #001e28;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  letter-spacing: 1.2px;
+  transition: all 1s;
+}
+
+.products .cards .card .card-footer a:hover {
+  background-color: #001e28;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 550px) {
+  .products .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 830px) {
+  .products .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 831px) and (max-width: 1200px) {
+  .products .cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

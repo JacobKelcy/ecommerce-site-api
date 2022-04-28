@@ -1,4 +1,13 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faShoppingCart,
+  faSignIn,
+  faUserPlus,
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -7,63 +16,65 @@ export default function Header() {
         <div className="top row">
           <div className="col">
             <div className="topDiv">
-              <i className="fa fa-phone"></i>
+              <FontAwesomeIcon icon={faPhone} />
               <span> +381/000-000-0</span>
             </div>
             <div className="topDiv">
-              <i className="fa fa-envelope"></i>
+              <FontAwesomeIcon icon={faEnvelope} />
               <span> wewe@gmail.com</span>
             </div>
           </div>
           <div className="col">
             <div className="topDiv">
-              <a href="/">
+              <Link to="/">
                 <i className="fa fa-facebook"></i>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/">
                 <i className="fa fa-twitter"></i>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/">
                 <i className="fa fa-instagram"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
         <div className="middle row">
           <div className="col">
-            <a href="/">
+            <Link to="/">
               <h1 className="comp-logo">PERIC MILJAN</h1>
-            </a>
+            </Link>
           </div>
           <div className="col">
             <div className="nav">
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <Link to="/home">Home</Link>
                 </li>
                 <li>
-                  <a href="/">Products</a>
+                  <Link to="/products">Products</Link>
                 </li>
                 <li>
-                  <a href="/">About</a>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <a href="/">Contact</a>
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col">
             <div className="buttons">
-              <a href="/">
-                <i className="fa fa-sign-in"></i>Login
-              </a>
-              <a href="/">
-                <i className="fa fa-user-plus"></i> Register
-              </a>
-              <a href="/">
-                <i className="fa fa-shopping-cart"></i>Cart(0)
-              </a>
+              <Link to="/login">
+                <FontAwesomeIcon icon={faSignIn} />
+                Login
+              </Link>
+              <Link to="/register">
+                <FontAwesomeIcon icon={faUserPlus} /> Register
+              </Link>
+              <Link to="/cart">
+                <FontAwesomeIcon icon={faShoppingCart} />
+                Cart(0)
+              </Link>
             </div>
           </div>
         </div>
