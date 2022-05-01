@@ -29,7 +29,7 @@ export default function Header() {
             </div>
             <div className="topDiv">
               <FontAwesomeIcon icon={faEnvelope} />
-              <span> wewe@gmail.com</span>
+              <span> jacobkelcy23@gmail.com</span>
             </div>
           </div>
           <div className="col">
