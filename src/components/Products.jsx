@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
 
-  let componentMounted = true;
+  let componentMounted = useRef(true);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -18,7 +18,7 @@ const Products = () => {
         setLoading(false);
       }
       return () => {
-        componentMounted = false;
+        componentMounted.current = false;
       };
     };
     getProducts();
@@ -91,9 +91,9 @@ const Products = () => {
                     </div>
                   </div>
                   <div className="card-footer">
-                    <a href="/" className="buyNow">
+                    <Link to={`/products/${product.id}`} className="buyNow">
                       Buy Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </>
@@ -103,7 +103,6 @@ const Products = () => {
       </>
     );
   };
-
   return (
     <>
       <div className="products">

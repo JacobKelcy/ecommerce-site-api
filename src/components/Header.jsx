@@ -7,9 +7,17 @@ import {
   faSignIn,
   faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagramSquare,
+  faTwitterSquare,
+} from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Header() {
+  const state = useSelector((state) => state.HandleCart);
+
   return (
     <div className="header">
       <div className="container">
@@ -27,13 +35,13 @@ export default function Header() {
           <div className="col">
             <div className="topDiv">
               <Link to="/">
-                <i className="fa fa-facebook"></i>
+                <FontAwesomeIcon icon={faFacebook} />
               </Link>
               <Link to="/">
-                <i className="fa fa-twitter"></i>
+                <FontAwesomeIcon icon={faTwitterSquare} />
               </Link>
               <Link to="/">
-                <i className="fa fa-instagram"></i>
+                <FontAwesomeIcon icon={faInstagramSquare} />
               </Link>
             </div>
           </div>
@@ -73,7 +81,7 @@ export default function Header() {
               </Link>
               <Link to="/cart">
                 <FontAwesomeIcon icon={faShoppingCart} />
-                Cart(0)
+                Cart({state.length})
               </Link>
             </div>
           </div>

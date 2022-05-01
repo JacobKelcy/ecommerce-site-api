@@ -4,11 +4,15 @@ import App from "./App";
 import "./index.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
+import store from "./redux/store";
+import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </Router>
 );
 
